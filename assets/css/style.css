@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    margin: 10px;
+    padding: 20px;
+}
+
+.float-left {
+    float: left;
+}
+
