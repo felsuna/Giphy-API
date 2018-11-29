@@ -28,7 +28,10 @@ $(document).on("click", ".buttons", function () {
             for (var i = 0; i < response.data.length; i++) {
                 var giphyContainer = $("<div>");
                 var newImage = $("<img>");
-                newImage.attr("src", response.data[i].images.original.url);
+                newImage.attr("src", response.data[i].images.original_still.url);
+                newImage.attr("data-animated", response.data[i].images.original.url);
+                newImage.attr("data-still", response.data[i].images.original_still.url);
+                newImage.attr("gif-state", 'still');
                 giphyContainer.append(newImage);
                 var newRating = $("<p>");
                 newRating.text("Rating: " + response.data[i].rating);
@@ -45,3 +48,18 @@ $("#add-animal-form").on("submit", function (event) {
     displayButtons()
     console.log(inputAnimal)
 })
+
+$("#giphy-images").on("click", "img", function () {
+
+    var state = $(this).attr("gif-state");
+
+    if (state == "still") {
+        $(this).attr("src", $(this).attr("data-animated"));
+        $(this).attr("gif-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("gif-state", "still");
+
+};
+});
+
