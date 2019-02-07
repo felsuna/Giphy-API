@@ -15,4 +15,6 @@ h1 {
     float: left;
 }
 
-/* 100 wide */
+#giphy-images {
+    float: left;
+}
