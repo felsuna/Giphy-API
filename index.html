@@ -8,8 +8,8 @@
     <title>GifTastic</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,17 +17,15 @@
         <div class="container">
             <h1 class="display-4">GifTastic!</h1>
             <p class="lead align text-center">Click on a button or create your own.</p>
+            <h4>
+                <form id="add-animal-form" class="align text-center">
+                    <input id="input" required placeholder="Add an animal">
+                    <button type="submit">Submit</button>
+                </form>
+            </h4>
         </div>
     </div>
-    <div id="row">
-        <h1>
-            <form id="add-animal-form">
-                <input id="input" required placeholder="Add an animal">
-                <button type="submit">Submit</button>
-            </form>
-        </h1>
-    </div>
-    <div id="container">
+    <div class="container align text-center">
         <div id="buttons"></div>
         <br>
         <div id="row">
@@ -35,6 +33,7 @@
         </div>
         <br>
     </div>
+
 </body>
 
 <script src="assets/javascript/javascript.js"></script>

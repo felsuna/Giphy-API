@@ -16,5 +16,11 @@ h1 {
 }
 
 #giphy-images {
-    float: left;
+    float: left,
+}
+
+.buttons {
+    inline-size: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
